@@ -19,13 +19,13 @@ module GoodsProber
 
     def validation_path(path)
       if path.nil?
-        raise "Wring caterory path"
+        raise "Wrong caterory path"
       end
     end
 
     def validation_file_name(file)
       if file.nil?
-        raise "Wring file name"
+        raise "Wrong file name"
       end
     end
   end
