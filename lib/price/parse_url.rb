@@ -30,6 +30,19 @@ module GoodsPrice
       end
       goods
     end
+
+    def to_csv
+      goods = find_goods
+      all_keys = %w{full_name cost image delivery good_code}
+      CSV.open("#{@file_name}.csv", "wb") do |csv|
+        goods.each_with_index do |good, i|
+          csv << ["#{i+1})"]
+          all_keys.each do |key|
+            csv << ["#{key} : #{good[:"#{key}"]}"]
+          end
+        end
+      end
+    end
   end
 end
 
