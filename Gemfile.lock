@@ -4,6 +4,11 @@ GEM
     coderay (1.1.1)
     curb (0.9.3)
     method_source (0.8.2)
+    mini_portile2 (2.1.0)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    pkg-config (1.1.7)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -15,6 +20,7 @@ PLATFORMS
 
 DEPENDENCIES
   curb (~> 0.9.3)
+  nokogiri (~> 1.6, >= 1.6.8)
   pry
 
 BUNDLED WITH
