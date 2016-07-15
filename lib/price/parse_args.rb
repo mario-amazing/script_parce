@@ -12,7 +12,7 @@ module GoodsPrice
                        http://www.viovet.co.uk/[category_path]'
       end.parse!(@args)
       category_path = @args.shift
-      file_name = @args.shift
+      file_name = @args.shift.gsub(/.csv$/, '')
       validation_path(category_path)
       validation_file_name(file_name)
       {category_path: category_path, file_name: file_name}
